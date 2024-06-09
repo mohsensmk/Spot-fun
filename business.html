@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/comsoon.css">
+</head>
+<body>
+    <header>
+        <div class="logo stylish-logo">
+            <a href="index.html">Fun Spot</a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search Events" class="search-input">
+            <input type="text" placeholder="Milano" class="search-input">
+        </div>
+        <nav class="stylish-nav">
+            <a href="#find-events">Find Events</a>
+            <a href="createevent.html">Create Events</a>
+            <a href="login.html">Log In</a>
+            <a href="signup.html">Sign Up</a>
+        </nav>
+    </header>
+
+
+    <!-- Popup overlay for "coming soon" message -->
+    <div class="overlay" id="overlay">
+        <div class="overlay-content">
+            <span class="close-btn" onclick="closeOverlay()">&times;</span>
+            <h2>Coming Soon!</h2>
+            <p>Stay tuned for exciting updates on Business.</p>
+        </div>
+    </div>
+
+    
+    <script src="/js/script.js"></script>
+    <script>
+        window.onload = function() {
+            document.getElementById("overlay").style.visibility = "visible";
+        };
+
+        // JavaScript function to close the overlay
+        function closeOverlay() {
+            document.getElementById("overlay").style.visibility = "hidden";
+            window.location.href = "index.html"; // Redirect to index.html
+
+        }
+    </script>
+</body>
+</html>

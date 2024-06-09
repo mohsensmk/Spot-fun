@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Spot</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/games.css">
+</head>
+<body>
+    <header>
+        <div class="logo stylish-logo">
+            <a href="index.html">Fun Spot</a>
+        </div>
+        <nav class="stylish-nav">
+            <a href="#find-events">Find Events</a>
+            <a href="createevent.html">Create Events</a>
+            <a href="login.html">Log In</a>
+            <a href="signup.html">Sign Up</a>
+        </nav>
+    </header>
+    <div class="info-section stylish-info">
+        <h1>Games</h1>
+    </div>
+    <main class="stylish-main">
+        <div class="categories">
+            <a href="#" class="category" data-info="Backgammon is a two-player game combining elements of luck and strategy.">Backgammon</a>
+        </div>
+        <div class="categories">
+            <a href="#" class="category" data-info="Poker is a family of card games that combines gambling, strategy, and skill.">Poker</a>
+        </div>
+        <div class="categories">
+            <a href="#" class="category" data-info="Mafia is a social deduction game, often played at parties or gatherings.">Mafia</a>
+        </div>
+        <div class="categories">
+            <a href="#" class="category" data-info="PlayStation is a gaming brand that consists of four home video game consoles.">Play Station</a>
+        </div>
+        <div class="categories">
+            <a href="#" class="category" data-info="Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal.">Football</a>
+        </div>
+        <div class="categories">
+            <a href="#" class="category" data-info="Card games are games played with playing cards.">With Cards</a>
+        </div>
+        <div class="categories">
+            <a href="#" class="category" data-info="Volleyball is a team sport in which two teams of six players are separated by a net.">Volleyball</a>
+        </div>
+        <div class="categories">
+            <a href="#" class="category" data-info="Monopoly is a board game that involves trading and owning properties.">Monopoly</a>
+        </div>
+    </main>
+    
+    <!-- Popup Modal Structure -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <form id="eventForm">
+                <label for="eventDate">Event Date:</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+                <br>
+                <label for="eventTime">Event Time:</label>
+                <input type="time" id="eventTime" name="eventTime" required>
+                <br>
+                <label for="players">Number of Players:</label>
+                <input type="number" id="players" name="players" min="1" required>
+                <br>
+                <label for="eventPlace">Event Place:</label>
+                <input type="text" id="eventPlace" name="eventPlace" required>
+                <br>
+                <div id="map"></div>
+                <br>
+                <button type="submit" id="createEventButton">Create Event</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <!-------------------FOOTER-------------------------->
+    <footer class="footer stylish-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>123 Street Name<br>City, Country<br>Email: example@example.com<br>Phone: +123456789</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <img src="/img/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                        <img src="/img/twitterx.png" alt="Twitter">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                        <img src="/img/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                        <img src="/img/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Fun Spot. All rights reserved.
+        </div>
+    </footer>
+    <!-------------------FOOTER-END------------------------->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/games.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+</body>
+</html>
